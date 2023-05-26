@@ -29,3 +29,9 @@ let name1 = "john";
 let name2 = "John";
 console.log(name1 == name2);
 console.log(name1 == name2.toLowerCase());
+
+//Esercizio 8
+let title = document.getElementById("title");
+title.addEventListener("click", function () {
+  title.textContent = "Mamma mia che figata";
+});
