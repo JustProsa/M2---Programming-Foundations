@@ -75,28 +75,49 @@ console.log(giveMeRandom(15));
 
 //Esercizio 1
 
-function crazySum2(num1, num2) {
-  return num1 !== num2 ? num1 + num2 : (num1 + num2) * 3;
+function area(base, altezza) {
+  return `Il reattangolo di base ${base} e altezza ${altezza}, ha un' area di ${
+    base * altezza
+  }`;
 }
-console.log(crazySum2(2, 4));
-console.log(crazySum2(5, 5));
+console.log(area(2, 4));
+console.log(area(5, 5));
 
 //Esercizio 2
 
-function boundary2(x) {
-  if ((20 <= x && x <= 100) || x === 400) {
-    return true;
-  } else {
-    return false;
-  }
+function crazyDiff(numero) {
+  return Math.abs(numero - 19) > 19
+    ? Math.abs(numero - 19) * 3
+    : Math.abs(numero - 19);
 }
 
-console.log(boundary2(60));
-console.log(boundary2(14));
-console.log(boundary2(400));
+console.log(crazyDiff(60));
+console.log(crazyDiff(21));
+console.log(crazyDiff(8));
 
 //Esercizio 3
 
+function codify(stringa) {
+  return stringa.startsWith("code") ? stringa : `code ${stringa}`;
+}
+let codefrase = "ciao come stai?";
+console.log(codify(codefrase));
+
 //Esercizio 4
 
+function check3and7(int) {
+  return int % 3 === 0 || int % 7 === 0 ? true : false;
+}
+
+console.log(check3and7(10));
+console.log(check3and7(14));
+console.log(check3and7(3));
+
 //Esercizio 5
+
+function cutString(string) {
+  return string.slice(1, -1);
+  // return string.slice(1, string.length - 1)
+}
+
+console.log(cutString("EPICODE"));
