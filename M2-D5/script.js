@@ -2,11 +2,7 @@
 // Esercizio 1
 
 function crazySum(num1, num2) {
-  if (num1 !== num2) {
-    return num1 + num2;
-  } else {
-    return num1 * num2;
-  }
+  return num1 !== num2 ? num1 + num2 : (num1 + num2) * 3;
 }
 console.log(crazySum(2, 4));
 console.log(crazySum(5, 5));
@@ -21,17 +17,19 @@ function boundary(x) {
   }
 }
 
-console.log(boundary(133));
-console.log(boundary(348));
-console.log(boundary(400));
+console.log(boundary(133), 133);
+console.log(boundary(348), 348);
+console.log(boundary(400), 400);
 
 //Esercizio 3
 
 function reverseString(str) {
-  let stringArray = str.split("");
-  let reverseArray = stringArray.reverse();
-  let reverseStr = reverseArray.join("");
-  return reverseStr;
+  // let stringArray = str.split("");
+  // let reverseArray = stringArray.reverse();
+  // let reverseStr = reverseArray.join("");
+  // return reverseStr;
+
+  return str.split("").reverse().join("");
 }
 
 let epicode = "EPICODE!";
@@ -43,9 +41,10 @@ console.log(reverseEpicode);
 function upperFirst(frase) {
   let fraseArray = frase.split(" ");
   for (let i = 0; i < fraseArray.length; i++) {
-    fraseArray[i] = fraseArray[i].split("");
-    fraseArray[i][0] = fraseArray[i][0].toUpperCase();
-    fraseArray[i] = fraseArray[i].join("");
+    // fraseArray[i] = fraseArray[i].split("");
+    // fraseArray[i][0] = fraseArray[i][0].toUpperCase();
+    // fraseArray[i] = fraseArray[i].join("");
+    fraseArray[i] = fraseArray[i][0].toUpperCase() + fraseArray[i].slice(1);
   }
 
   let upperCaseArray = fraseArray.join(" ");
@@ -53,7 +52,8 @@ function upperFirst(frase) {
   return upperCaseArray;
 }
 
-let stringa = "che ne pensi dei bububu?";
+let stringa =
+  "forse però pietro potrà proteggerci detto anche tigre intriga tigre";
 console.log(upperFirst(stringa));
 
 //Esercizio 5
