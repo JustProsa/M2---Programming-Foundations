@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*GENERALI*/
+
+.red-text {
+  color: red;
+}
+
+.blue-color {
+  color: blue;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/*SPECIFICHE*/
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 6.4rem;
+  margin-bottom: 4.8rem;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.4rem;
+}
+
+.prod-img img {
+  width: 100%;
+}
+
+.prod-bottom {
+  margin-top: 1.8rem;
+  margin-right: 0.8rem;
+}
+
+.prod-title p {
+  font-size: 2.4rem;
+}
+
+.prod-description {
+  margin-top: 1.8rem;
+}
+
+.prod-description p {
+  color: #777;
+  font-size: 1.8rem;
+}
+
+.prod-buy {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.prod-buy a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.prod-buy a ion-icon {
+  font-size: 3.6rem;
+}
+
+.cost {
+  font-size: 2.4rem;
+}
+
+.feedback {
+  margin-top: 1.8rem;
+}
+
+.feedback form label {
+  font-size: 1.8rem;
+}
