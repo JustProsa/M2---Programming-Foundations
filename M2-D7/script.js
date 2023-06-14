@@ -126,14 +126,16 @@ const jobs = [
 ];
 
 function searchJobs() {
+  //Seleziona gli elementi dalla pagina HTML e li trasforma in LowerCase
   let titleInput = document.getElementById("title");
   let titleInputLower = titleInput.value.toLowerCase();
   let locationInput = document.getElementById("location");
   let locationInputLower = locationInput.value.toLowerCase();
   let resultsContainer = document.getElementById("results");
   resultsContainer.innerHTML = "";
-  let results = [];
 
+  //In base alla ricerca effettuata, inserisci nell' array RESULTS gli elementi di JOBS che ne rispettano i criteri
+  let results = [];
   for (i = 0; i < jobs.length; i++) {
     let job = jobs[i];
 
@@ -148,6 +150,16 @@ function searchJobs() {
     }
   }
 
+  //Crea l'elemento COUNT che fornisce il numero di risultati ottenuti dalla ricerca
+  let countElement = document.getElementById("count");
+  countElement.innerHTML = "";
+  let countNumber = document.createElement("span");
+  countNumber.textContent = `${results.length}`;
+  let countItem = document.createElement("p");
+  countItem.textContent = `Ci sono ${countNumber.textContent} posizioni che soddisfano le tue richieste`;
+  countElement.appendChild(countItem);
+
+  //Manda a console il risultato dell' algoritmo come richiesto dall' esercizio
   let count = results.length;
   console.log(count, results);
 }
