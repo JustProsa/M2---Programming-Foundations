@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1 class="research-title">Ricerca Inserzioni</h1>
     <main class="container">
-      <h1 class="research-title">Ricerca Inserzioni</h1>
-
       <div class="research">
         <div class="job">
           <label for="title" class="label">Posizione lavorativa:</label>
-          <input type="text" id="title" />
+          <input type="text" id="title" onkeydown="handleKeyDown(event)" />
         </div>
 
         <div class="localization">
           <label for="location" class="label">Posizione geografica:</label>
-          <input type="text" id="location" />
+          <input type="text" id="location" onkeydown="handleKeyDown(event)" />
         </div>
       </div>
 

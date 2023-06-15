@@ -125,6 +125,15 @@ const jobs = [
   },
 ];
 
+//Chiama la funzione di ricerca con il tasto INVIO
+function handleKeyDown(event) {
+  if (event.keyCode === 13) {
+    // Verifica se il tasto premuto è il tasto Invio (codice 13)
+    event.preventDefault(); // Previene il comportamento predefinito del tasto Invio (ad esempio, il submit di un modulo)
+    searchJobs(); // Chiama la funzione per avviare la ricerca
+  }
+}
+
 function searchJobs() {
   //Seleziona gli elementi dalla pagina HTML e li trasforma in LowerCase
   let titleInput = document.getElementById("title");
