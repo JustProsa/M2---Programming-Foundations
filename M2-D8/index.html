@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M2-D8</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="research-title">Ricerca Inserzioni</h1>
+
+      <div class="research">
+        <div class="job">
+          <label for="title" class="label">Posizione lavorativa:</label>
+          <input type="text" id="title" />
+        </div>
+
+        <div class="localization">
+          <label for="location" class="label">Posizione geografica:</label>
+          <input type="text" id="location" />
+        </div>
+      </div>
+
+      <div class="button">
+        <button onclick="searchJobs()" class="search-button">Cerca</button>
+      </div>
+
+      <div id="count"></div>
+
+      <ul id="results"></ul>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
